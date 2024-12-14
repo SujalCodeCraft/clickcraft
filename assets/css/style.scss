@@ -282,7 +282,8 @@ main{
             border-radius: 1rem;
             gap: 1rem;
             border: 1px solid   #2A2B3A;
-            flex-wrap: wrap;
+         
+            // overflow: scroll;
             .recenet_user__{
                 text-align: center;
                 img{
@@ -373,81 +374,176 @@ main{
 
 
 @media only screen and (max-width:576px){
-    .header__{
-        .nav__{
-          
-            .nav_middle{
-                display: none;
-            }
-            .nav_buttons{
-                display: none !important;
-            }
-        }
+    main .header__ .nav__ .nav_middle{
+        display: none;
+    }
+    main .header__ .nav__ .nav_buttons{
+        display: none;
+    }
+    .with-bg-img{
+        display: none;
     }
     main .header__ .nav__{
-        padding: 2rem;
-        .nav_right_mobile{
-            i{
-                font-size: 20px;
-            }
+        padding: 1.5rem;
+    }
+    .nav_right_mobile{
+        i{
+            font-size: 1.5rem;
         }
+    }
+    main .welcome__ .welcome_headings > :first-child{
+        letter-spacing: 5px;
+        font-size: 0.8rem;
     }
     main .welcome__ .welcome_headings > :nth-child(2){
         max-width: 100%;
-        font-size: 2.5rem;
+        padding: 5px 15px;
+        font-weight: bold;
+        font-size: 26px;
     }
-    main .profile-setup .profile-complet-card .cardleft_img img{
-        width: 420px;
-    }
-    main .profile-setup .profile-complet-card .cardleft_img{
-        >:first-child{
-            display: none;
-        }
+    main .welcome__ .welcome_headings > :nth-child(4){
+        font-size: 14px;
     }
     main .welcome__ .hero_sec_img{
-        bottom: 15px;
-
+        right: 0;
+        bottom: 0;
     }
-    main .profile-setup .setup_header > :last-child{
-        max-width: 90%;
-        font-size: 15px;
+    main .welcome__ .welcome_headings .herosection_btns{
+        padding-right: 0;
+    }
+    main .welcome__ .welcome_headings .herosection_btns button{
+        width: 90%;
+        margin: 1rem 0;
+    }
+    main .welcome__ .welcome_headings .herosection_btns{
+        >:first-child{
+            box-shadow: 0 0 10px 0 #7744FF;
+            border: 2px solid #7744FF;
+        }
     }
     main .profile-setup .setup_header > :first-child{
-        font-size: 2.5rem;
+        font-size: 1.6rem;
+    }
+    main .profile-setup .setup_header > :last-child{
+        display: none;
+    }
+    main .profile-setup .setup_header{
+        margin: 0.5rem 0;
     }
     main .profile-setup .profile-complet-card{
-        margin: 2rem;
+        margin: 1rem 0.5rem ;
+        padding: 0.5rem 1rem;
+    }
+    main .profile-setup .profile-complet-card .cardright_txt{
+        padding: 0.5rem 0;
+    }
+    main .profile-setup .profile-complet-card .cardright_txt > :first-child {
+        padding: 0.5rem;
+        font-size: 15px;
+        letter-spacing: 4px;
+        margin-bottom: 0;
+    }
+    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(2){
+        font-size: 1.2rem;
+        padding: 0;
     }
     main .profile-setup .profile-complet-card .cardright_txt > :nth-child(3){
+        font-size: 12px;
+        line-height: normal;
         max-width: 100%;
-        font-size: 16px;
+    }
+    main .profile-setup .profile-complet-card .cardleft_img img{
+        max-width: 225px;
+    }
+    main .profile-setup .profile-complet-card .cardright_txt > :last-child{
+        padding: 0.2rem 0;
+        text-align: center;
+    }
+    main .top-rated{
+        padding: 0;
+    }
+    main .top-rated .rated_header > h4{
+        font-size: 1.8rem;
+    }
+    main .top-rated .rated_header{
+        padding: 0;
+    }
+    main .top-rated .home-portfolio-card{
+        margin: 1rem 0.5rem;
+        padding: 1rem;
+        padding-top: 3rem;
+        text-align: center;
+    }
+    main .top-rated .home-portfolio-card > :nth-child(2){
+        font-size: 1.2rem;
+    }
+    main .top-rated .home-portfolio-card > :nth-child(3){
+        font-size: 14px;
+        max-width: 100%;
+    }
+    main .recent__ .recent_users{
+        padding: 0.5rem         ;
+        gap: 1.5rem
+        ;
+        overflow: scroll;
+        justify-content: start;
+        border: none;
+        scrollbar-width: none;
+    }
+    main .recent__ .recent_users .recenet_user__ img{
+        max-width: 80px;
+    }
+    main .recent__ .recent_users .recenet_user__ P{
+        font-size: 13px;
     }
     main .recent__ .always-rechable-card{
-        margin: 2rem;
+        margin: 2rem  1rem ;
         max-width: fit-content;
+        padding: 0.5rem ;
+       
+        
+    }
+    main .recent__ .always-rechable-card .reachable-left-txt > :first-child{
+        font-size: 1.5rem;
+        padding: 0.2rem;
+        margin-bottom: 0;
+    }
+    main .recent__ .always-rechable-card .reachable-left-txt > :nth-child(2){
+        font-size: 15px;
+    }
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username{
+        font-size: 10px;
+    }
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p{
+        font-size: 10px;
+    }
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail{
+        padding-left: 2rem;
+    }
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails {
+        img{
+            max-width: 60px;
+        }
     }
     .reachable-right-img{
         text-align: center;
-        padding: 1rem 0;
         img{
-            max-width: 360px;
+            max-width: 230px;
+        }
+    }
+    main footer .footer-right{
+        text-align: center;
+    }
+    main footer .footer-right span{
+        margin-right: 1rem;
+        font-size: 12px;
+    }
+    main footer .footer-left{
+        p{
+            font-size: 12px;
+            text-align: center;
         }
     }
 }
 
-@media only screen and (min-width:320px) and (max-width:576px){
-    main .profile-setup .profile-complet-card .cardleft_img img{
-        max-width: 245px;
-    }
-    .reachable-right-img img{
-        max-width: 240px;
-    }
-}
-
-
-@media only screen and (min-width:768px){
-    .nav_right_mobile{
-        display: none;
-    }
-}
 
