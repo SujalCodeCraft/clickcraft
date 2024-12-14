@@ -1,8 +1,21 @@
 //google Fonts Roboto
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Add this if you are using Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
-*{
+.element::after {
+    content: '\f0da';
+    /* Unicode for Font Awesome right caret */
+    font-family: "Font Awesome 5 Free";
+    /* Specify Font Awesome family */
+    font-weight: 900;
+    /* Set appropriate weight for Font Awesome solid icons */
+    padding-left: 10px;
+    /* Space before the arrow */
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,139 +23,299 @@
 
 }
 
-main{
+ //registration page 
+ .signupin___{
+    background-color: #010314;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .singupin__form{
+       border: 1px solid #fff;
+       padding: 2rem;
+       border-radius: 0.8rem;
+       min-width: 400px;
+       max-width: fit-content;
+       border: 2px solid #664DFF;
+       box-shadow: #7241FF 0px 7px 70px -20px;
+       background-color: #01031425;
+       
+       .form-header{
+        >h3{
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+
+        }
+       }
+       .form-body{
+        .form-input__{
+            padding: 0.5rem ;
+         
+            >label{
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 17px;
+            }
+            input{
+                width: 100%;
+                background-color: transparent;
+                border: 1px solid #2a2b3a;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                &:focus{
+                   outline: 2px solid #664DFF;
+                }
+            }
+            button{
+                width: 100%;
+                padding: 0.3rem;
+                border-radius: 0.5rem;
+                background-color: #664DFF;
+                color: #fff;
+                border: none;
+            }
+           
+           
+        }
+        .signin-line{
+            padding: 0.5rem;
+            a{
+                color: #fff !important;
+               
+            }
+        }
+       }
+        
+    }
+}
+
+
+main {
     background-color: #010314;
     color: #ffffff;
     font-size: 16px;
-    a{
+
+    a {
         color: #fff;
         text-decoration: none;
     }
-    ul{
+
+    ul {
         // padding-left: 0;
         margin-bottom: 0;
     }
-    .header__{
-        .nav__{
+
+    //offcanvas css 
+    .offcanvas {
+        background-color: #010314;
+        color: #fff;
+        height: 100vh !important;
+        .offcanvas-body{
+            >h4{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .nav-list{
+                padding: 1rem;
+                >ul{
+                    padding-left: 0;
+                    li{
+                        list-style-type: none;
+                        border-bottom: 1px solid #2A2B3A;
+                        padding: 0.8rem ;
+                        padding-left: 0;
+
+                    }
+                }
+            }
+            .nav-btns{
+                padding: 1rem;
+                button{
+                    background-color: transparent;
+                    border: 2px solid #2A2B3A;
+                    color: #fff;
+                    padding: 0.5rem 1.5rem;
+                    margin-right: 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+
+    /* Target the custom close button */
+    .closing-btn {
+        background-color: transparent;
+        /* Keep the background transparent */
+        border: none;
+        /* Remove any border */
+
+        /* Override the color of the close (X) icon */
+        &::before {
+            color: #fff;
+            /* Change the cross (X) color to white */
+        }
+    }
+
+    /* For better compatibility with Bootstrap, target the btn-close specifically */
+    .btn-close {
+        filter: brightness(0) invert(1);
+        /* This makes the icon white */
+    }
+
+    .btn-close:hover {
+        filter: brightness(0) invert(0.7);
+        /* Slightly dim the icon on hover */
+    }
+
+
+   
+
+    .header__ {
+        .nav__ {
             display: flex;
             margin: 0 auto;
             justify-content: space-between;
             align-items: center;
             max-width: 1300px;
             padding: 2rem 0;
-            .nav_logo{
-                img{
+
+            .nav_logo {
+                img {
                     max-width: 200px;
                 }
             }
-            .nav_middle{
+
+            .nav_middle {
                 // border: 1px solid white;
                 padding-left: 2.5rem;
-                >ul{
+
+                .active {
+                    color: #865BFF;
+                    font-weight: 500;
+                }
+
+                >ul {
                     display: flex;
                     align-items: center;
                     list-style-type: none;
                     font-size: 18px;
                     // padding-left: 0;
                     margin-bottom: 0;
-                    li{
+
+                    li {
                         padding: 0.2rem 1.8rem;
                     }
-                    >:last-child{
+
+                    >:last-child {
                         padding-right: 0;
                     }
                 }
             }
-            .nav_buttons{
+
+            .nav_buttons {
                 display: flex;
                 align-items: center;
-                button{
+
+                button {
                     padding: 0.3em 1.8em;
                     border-radius: 1.5rem;
                     margin: 0 1em;
                     background-color: transparent;
                     color: #ffffff;
                     font-family: 0.8rem;
-                  
-                
+
+
                 }
-                .signup_btn{
-                    button{
+
+                .signup_btn {
+                    button {
                         border: 2px solid #7241FF;
-                        box-shadow: 0 0 10px 0 #7744FF ;
+                        box-shadow: 0 0 10px 0 #7744FF;
                         color: #7644ffc1;
                     }
                 }
-                .signin_btn{
-                    button{
+
+                .signin_btn {
+                    button {
                         border: 2px solid #2A2B3A;
                     }
                 }
-                
-                
+
+
             }
 
-           
+
         }
     }
 
 
     //hero section
-    .welcome__{
+    .welcome__ {
         position: relative;
         text-align: center;
         padding: 4rem 0;
-        .welcome_headings{
-            >:first-child{
+
+        .welcome_headings {
+            >:first-child {
                 margin-bottom: 0;
                 letter-spacing: 8px;
                 font-size: 1.2rem;
                 color: #7241FF;
             }
-            >:nth-child(2){
+
+            >:nth-child(2) {
                 font-size: 3.5rem;
                 padding: 1rem;
                 // border: 1px solid white;
                 max-width: 55%;
                 margin: 0 auto;
             }
-            >:nth-child(3){
+
+            >:nth-child(3) {
                 color: #77798F;
                 max-width: 35%;
-                padding: 0.5rem ;
+                padding: 0.5rem;
                 // border: 1px solid white;
                 margin: 0 auto;
             }
-           
-            .herosection_btns{
+
+            .herosection_btns {
                 max-width: fit-content;
-                margin:  0 auto;
+                margin: 0 auto;
                 padding-right: 2.5rem;
-                button{
+
+                button {
                     padding: 0.8rem 2rem;
-                    margin:  1rem 1.2rem;
+                    margin: 1rem 1.2rem;
                     border-radius: 1.5rem;
                     border: 2px solid #77798F;
                     background-color: transparent;
                     color: #ffffff;
-                    span{
+
+                    span {
                         margin-right: 1rem;
                     }
-    
+
                 }
-             
+
             }
-            .star-images{
-                img{
+
+            .star-images {
+                img {
                     position: absolute;
                     right: 13rem;
                     top: 18rem;
                     max-width: 300px;
                 }
             }
-         
+
         }
-        .hero_sec_img{
+
+        .hero_sec_img {
             position: relative;
             bottom: 2.3rem;
             right: 1rem;
@@ -151,113 +324,133 @@ main{
 
 
     //profile setup 
-    .profile-setup{
+    .profile-setup {
         padding-bottom: 3rem;
-        .setup_header{
+
+        .setup_header {
             margin: 2rem 0;
-            >:first-child{
+
+            >:first-child {
                 font-size: 3rem;
                 margin-bottom: 1.5rem;
             }
-            >:last-child{
+
+            >:last-child {
                 max-width: 49%;
                 font-size: 20px;
                 margin: 0 auto;
                 // border: 1px solid white;
             }
         }
-        .profile-complet-card{
+
+        .profile-complet-card {
             margin: 2rem 0;
             margin-top: 4rem;
             background-color: #010314;
-         
+
             padding: 2rem;
             border-top: 4px solid #7241FF;
             border-bottom: 4px solid #7241FF;
             box-shadow: #7241FF 0px 7px 70px -20px;
-            
+
             border-radius: 3rem;
-            .cardleft_img{
+
+            .cardleft_img {
+
                 // text-align: center;
-                img{
+                img {
                     max-width: 550px;
                 }
             }
-            .cardright_txt{
+
+            .cardright_txt {
                 padding: 2.5rem 0;
-                >:first-child{
+
+                >:first-child {
                     padding: 0.5rem 0;
                     font-size: 18px;
                     letter-spacing: 5px;
                     margin-bottom: 0;
                 }
-                >:nth-child(2){
+
+                >:nth-child(2) {
                     padding: 0.5rem 0;
                     font-size: 2.5rem;
                     margin-bottom: 0;
                 }
-                >:nth-child(3){
+
+                >:nth-child(3) {
                     padding: 0.5rem 0;
                     margin-bottom: 0;
                     font-size: 18px;
                     max-width: 80%;
                     line-height: 1.9rem;
                 }
-                >:last-child{
+
+                >:last-child {
                     padding: 1rem 0;
-                  button{
-                    border: 2px solid #664DFF;
-                    border-radius: 1.5rem;
-                    padding: 0.5rem 1.5rem ;
-                    margin: 0.5rem 0;
-                    background-color: transparent;
-                    color: #ffffff;
-                  }
+
+                    button {
+                        border: 2px solid #664DFF;
+                        border-radius: 1.5rem;
+                        padding: 0.5rem 1.5rem;
+                        margin: 0.5rem 0;
+                        background-color: transparent;
+                        color: #ffffff;
+                    }
                 }
             }
         }
     }
 
-    .top-rated{
+    .top-rated {
         padding: 3rem 0;
-        .rated_header{
+
+        .rated_header {
             padding-bottom: 5rem;
-            >h4{
+
+            >h4 {
                 font-size: 3rem;
                 text-align: center;
             }
         }
-        .home-portfolio-card{
+
+        .home-portfolio-card {
             background-color: #010314;
-            padding: 2rem ;
+            padding: 2rem;
             padding-top: 6rem;
             border-top: 3px solid #7241FF;
             border-radius: 1rem;
             border-bottom: 3px solid #7241FF;
             box-shadow: #7241FF 0px 7px 70px -20px;
-            margin: 2rem ;
+            margin: 2rem;
             cursor: pointer;
-            >:first-child{
+
+            >:first-child {
                 margin-bottom: 0;
                 padding: 0.5rem 0;
                 color: #664DFF;
                 letter-spacing: 5px;
-                span{
+
+                span {
                     margin-right: 0.5rem;
                 }
             }
-            >:nth-child(2){
+
+            >:nth-child(2) {
                 margin-bottom: 0;
                 padding: 0.5rem 0;
             }
-            >:nth-child(3){
+
+            >:nth-child(3) {
                 padding: 0.5rem 0;
                 margin-bottom: 0;
                 font-size: 18px;
                 max-width: 80%;
                 color: #77798F;
             }
-            .card-img{
+
+            .card-img {
                 padding-top: 1rem;
             }
         }
@@ -265,37 +458,42 @@ main{
 
 
     //recent users 
-    .recent__{
+    .recent__ {
         padding: 1rem 0;
-        .recent__header{
-            >h3{
+
+        .recent__header {
+            >h3 {
                 font-size: 2.5rem;
                 padding: 2rem 0;
                 text-align: center;
             }
         }
-        .recent_users{
+
+        .recent_users {
             display: flex;
             align-items: center;
-            padding: 1.5rem 2.5rem ;
+            padding: 1.5rem 2.5rem;
             justify-content: center;
             border-radius: 1rem;
             gap: 1rem;
-            border: 1px solid   #2A2B3A;
-         
+            border: 1px solid #2A2B3A;
+
             // overflow: scroll;
-            .recenet_user__{
+            .recenet_user__ {
                 text-align: center;
-                img{
+
+                img {
                     max-width: 100px;
                 }
-                P{
+
+                P {
                     padding: 0 0.5rem;
                     margin-bottom: 0;
                 }
             }
         }
-        .always-rechable-card{
+
+        .always-rechable-card {
             padding: 2rem;
             margin: 2rem 0;
             margin-top: 4rem;
@@ -304,43 +502,51 @@ main{
             border-top: 4px solid #7241FF;
             border-bottom: 4px solid #7241FF;
             box-shadow: #7241FF 0px 7px 70px -20px;
-            .reachable-left-txt{
+
+            .reachable-left-txt {
                 padding: 1rem;
-                >:first-child{
+
+                >:first-child {
                     padding: 0.5rem 0;
                     font-size: 2rem;
                 }
-                >:nth-child(2){
+
+                >:nth-child(2) {
                     font-size: 20px;
                     padding: 0.5rem 0;
                     margin-bottom: 0;
                     // max-width: %;
                     color: #77798F;
                 }
-                .userdetails{
-                    .user-detail{
-                        p{
+
+                .userdetails {
+                    .user-detail {
+                        p {
                             margin-bottom: 0;
                             padding: 1px 0;
                         }
-                       
-                        .social-media-icon{
+
+                        .social-media-icon {
                             padding: 1px 0;
                         }
-                        .username{
+
+                        .username {
                             text-transform: uppercase;
                             font-size: 18px;
                             letter-spacing: 3px;
                             font-weight: 500;
                         }
-                        >:nth-child(2){
+
+                        >:nth-child(2) {
                             color: #77798F;
                         }
                     }
-                    .social-media-icon{
-                        span{
+
+                    .social-media-icon {
+                        span {
                             margin-right: 0.5rem;
-                            i{
+
+                            i {
                                 font-size: 18px;
                             }
                         }
@@ -351,18 +557,336 @@ main{
     }
 
     //footer
-    footer{
+    footer {
         padding: 1rem 0;
         border-top: 1px solid #77798F;
         background-color: #010314;
         color: #77798F;
-        p{
+
+        p {
             margin-bottom: 0;
         }
-        .footer-right{
+
+        .footer-right {
             text-align: end;
-            span{
+
+            span {
                 margin-right: 1.5rem;
+            }
+        }
+    }
+
+
+
+
+    //all portfolio 
+
+    .all_portfolio {
+        .main_heading {
+            padding: 2rem 0;
+
+            .dropdown {
+                padding-right: 2rem;
+
+                .dropdown_main {
+                    max-width: fit-content;
+                    border: 2px solid #2A2B3A;
+                    background-color: transparent;
+                    padding: 0.2rem 1rem;
+                    justify-self: end;
+                    border-radius: 0.5rem;
+
+                    select {
+                        background-color: transparent;
+                        color: #ffffff;
+                        border: none;
+                        width: 100%;
+
+                        &:focus {
+                            border: none;
+                            outline: none;
+                        }
+
+                    }
+                }
+            }
+
+            .heading_main {
+                text-align: center;
+
+                h3 {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .main_cards_section {
+            .portfolio-cards {
+                border: 1px solid #fff;
+                padding: 1.5rem;
+                margin: 2rem 0.5rem;
+                border-top: 4px solid #664DFF;
+                border-bottom: 4px solid #664DFF;
+                border-radius: 1rem;
+                border-right: 1px solid #664DFF;
+                border-left: 1px solid #664dff;
+                background-color: #010314;
+
+                .portfolio-card-details {
+                    padding: 1rem 0.5rem;
+
+                    .btns-main {
+                        text-align: center;
+
+                        button {
+                            padding: 5px 1.2rem;
+                            background-color: transparent;
+                            color: #fff;
+                            border: 2px solid #7241FF;
+                            border-radius: 0.5rem;
+                        }
+                    }
+
+                    .views__ {
+                        display: flex;
+
+                        p {
+                            margin-bottom: 0;
+                            margin: 0 0.5rem;
+
+                            span {
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    //community 
+
+    .community__ {
+        padding: 3rem 0.5rem;
+
+        .community_main_heading {
+            h3 {
+                text-align: center;
+                font-size: 2.5rem;
+                padding-bottom: 2rem;
+            }
+
+        }
+
+        .community_main__ {
+
+            .community-main-card {
+                padding: 0.5rem;
+                margin: 2rem 0;
+
+                .community-card-txt {
+                    position: relative;
+                    padding: 1.5rem;
+                    padding-bottom: 0.5rem;
+                    border-width: 4px 1px;
+                    border-style: solid;
+                    border-color: #7744FF;
+                    border-radius: 0.5rem;
+
+                    >p {
+                        color: #77798F;
+                        margin-bottom: 3rem;
+                    }
+
+                    .card-txt-bottom {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-right: 3rem;
+
+                        >:last-child {
+                            span {
+                                margin: 0 0.5rem;
+                                margin-right: 0.3rem;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        content: '\f0da';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        position: absolute;
+                        right: -1.5rem;
+                        font-size: 2.5rem;
+                        top: 35%;
+                    }
+                }
+
+                .community-card-img {
+
+                    .img-box {
+                        max-width: fit-content;
+                        text-align: center;
+                        padding-inline: 1rem;
+
+                        img {
+                            max-width: 100px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    //userdahboard 
+    .dashboard__ {
+        padding: 1rem;
+
+        .userdashboard__main {
+            border-width: 5px 2px;
+            border-color: #664DFF;
+            border-style: solid;
+            border-radius: 1rem;
+            box-shadow: #7241FF 0px 7px 70px -20px;
+            position: relative;
+            margin-top: 8rem;
+            padding: 5rem;
+            padding-top: 8rem;
+            padding-bottom: 1rem;
+
+            .userimage {
+                text-align: center;
+                position: relative;
+
+
+                img {
+                    max-width: 250px;
+                    position: absolute;
+                    left: 36%;
+                    top: -16rem;
+                    max-width: fit-content;
+
+                }
+            }
+
+            .edit-profile-btn {
+                position: absolute;
+                right: 2rem;
+                top: 2rem;
+
+                button {
+                    padding: 0.5rem 1.5rem;
+                    border: 2px solid #7744FF;
+                    background-color: transparent;
+                    color: #fff;
+                    box-shadow: #7241FF 0px 7px 70px -20px;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .username {
+                text-align: center;
+                padding: 1rem;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+
+            .userdetails-count {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .count__ {
+                    border-right: 2px solid #fff;
+                    padding: 0.5rem 2rem;
+                    text-align: center;
+
+                    >:first-child {
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                    }
+                }
+
+                >:last-child {
+                    border: none;
+                }
+
+            }
+
+            .userabout {
+                padding: 1rem 0.2rem;
+
+                >h4 {
+                    font-size: 2rem;
+                    padding: 1rem 0;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+
+            .myportfolio__ {
+                padding: 1rem 0.2rem;
+
+                >h4 {
+                    padding: 1rem 0.5rem;
+                    font-size: 2rem;
+                }
+
+                .portfolio-cards {
+                    border: 1px solid #fff;
+                    padding: 1.5rem;
+                    margin: 2rem 0.5rem;
+                    border-top: 4px solid #664DFF;
+                    border-bottom: 4px solid #664DFF;
+                    border-radius: 1rem;
+                    border-right: 1px solid #664DFF;
+                    border-left: 1px solid #664dff;
+                    background-color: #010314;
+
+                    .portfolio-card-details {
+                        padding: 1rem 0.5rem;
+
+                        .btns-main {
+                            text-align: center;
+
+                            button {
+                                padding: 5px 1.2rem;
+                                background-color: transparent;
+                                color: #fff;
+                                border: 2px solid #7241FF;
+                                border-radius: 0.5rem;
+                            }
+                        }
+
+                        .views__ {
+                            display: flex;
+
+                            p {
+                                margin-bottom: 0;
+                                margin: 0 0.5rem;
+
+                                span {
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+
+                }
             }
         }
     }
@@ -372,647 +896,1400 @@ main{
 
 //media query start
 
-@media only screen and (min-width:992px){
-    .nav_right_mobile{
+@media only screen and (min-width:992px) {
+    .nav_right_mobile {
         display: none;
     }
-    .mobile-view1{
+
+    .mobile-view1 {
         display: none;
     }
 }
-@media only screen and (max-width:576px){
-    main .header__ .nav__ .nav_middle{
+
+@media only screen and (max-width:576px) {
+    main .header__ .nav__ .nav_middle {
         display: none;
     }
-    main .header__ .nav__ .nav_buttons{
+
+    main .header__ .nav__ .nav_buttons {
         display: none;
     }
-    .with-bg-img{
+
+    .with-bg-img {
         display: none;
     }
-    main .header__ .nav__{
+
+    main .header__ .nav__ {
         padding: 1.5rem;
     }
-    .nav_right_mobile{
-        i{
+
+    .nav_right_mobile {
+        i {
             font-size: 1.5rem;
         }
     }
-    main .welcome__ .welcome_headings > :first-child{
+
+    main .welcome__ .welcome_headings> :first-child {
         letter-spacing: 5px;
         font-size: 0.8rem;
     }
-    main .welcome__ .welcome_headings > :nth-child(2){
+
+    main .welcome__ .welcome_headings> :nth-child(2) {
         max-width: 100%;
         padding: 5px 15px;
         font-weight: bold;
         font-size: 26px;
     }
-    main .welcome__ .welcome_headings > :nth-child(4){
+
+    main .welcome__ .welcome_headings> :nth-child(4) {
         font-size: 14px;
     }
-    main .welcome__ .hero_sec_img{
+
+    main .welcome__ .hero_sec_img {
         right: 0;
         bottom: 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns{
+
+    main .welcome__ .welcome_headings .herosection_btns {
         padding-right: 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns button{
+
+    main .welcome__ .welcome_headings .herosection_btns button {
         width: 90%;
         margin: 1rem 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns{
-        >:first-child{
+
+    main .welcome__ .welcome_headings .herosection_btns {
+        >:first-child {
             box-shadow: 0 0 10px 0 #7744FF;
             border: 2px solid #7744FF;
         }
     }
-    main .profile-setup .setup_header > :first-child{
+
+    main .profile-setup .setup_header> :first-child {
         font-size: 1.6rem;
     }
-    main .profile-setup .setup_header > :last-child{
+
+    main .profile-setup .setup_header> :last-child {
         display: none;
     }
-    main .profile-setup .setup_header{
+
+    main .profile-setup .setup_header {
         margin: 0.5rem 0;
     }
-    main .profile-setup .profile-complet-card{
-        margin: 1rem 0.5rem ;
+
+    main .profile-setup .profile-complet-card {
+        margin: 1rem 0.5rem;
         padding: 0.5rem 1rem;
     }
-    main .profile-setup .profile-complet-card .cardright_txt{
+
+    main .profile-setup .profile-complet-card .cardright_txt {
         padding: 0.5rem 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :first-child {
+
+    main .profile-setup .profile-complet-card .cardright_txt> :first-child {
         padding: 0.5rem;
         font-size: 15px;
         letter-spacing: 4px;
         margin-bottom: 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(2){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(2) {
         font-size: 1.2rem;
         padding: 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(3){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(3) {
         font-size: 14px;
         line-height: normal;
         max-width: 100%;
     }
-    main .profile-setup .profile-complet-card .cardleft_img img{
+
+    main .profile-setup .profile-complet-card .cardleft_img img {
         max-width: 225px;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :last-child{
+
+    main .profile-setup .profile-complet-card .cardright_txt> :last-child {
         padding: 0.2rem 0;
         text-align: center;
     }
-    main .top-rated{
+
+    main .top-rated {
         padding: 0;
     }
-    main .top-rated .rated_header > h4{
+
+    main .top-rated .rated_header>h4 {
         font-size: 1.8rem;
     }
-    main .top-rated .rated_header{
+
+    main .top-rated .rated_header {
         padding: 0;
     }
-    main .top-rated .home-portfolio-card{
+
+    main .top-rated .home-portfolio-card {
         margin: 1rem 0.5rem;
         padding: 1rem;
         padding-top: 3rem;
         text-align: center;
     }
-    main .top-rated .home-portfolio-card > :nth-child(2){
+
+    main .top-rated .home-portfolio-card> :nth-child(2) {
         font-size: 1.2rem;
     }
-    main .top-rated .home-portfolio-card > :nth-child(3){
+
+    main .top-rated .home-portfolio-card> :nth-child(3) {
         font-size: 14px;
         max-width: 100%;
     }
-    main .recent__ .recent_users{
-        padding: 0.5rem         ;
-        gap: 1.5rem
-        ;
+
+    main .recent__ .recent_users {
+        padding: 0.5rem;
+        gap: 1.5rem;
         overflow: scroll;
         justify-content: start;
         border: none;
         scrollbar-width: none;
     }
-    main .recent__ .recent_users .recenet_user__ img{
+
+    main .recent__ .recent_users .recenet_user__ img {
         max-width: 80px;
     }
-    main .recent__ .recent_users .recenet_user__ P{
+
+    main .recent__ .recent_users .recenet_user__ P {
         font-size: 13px;
     }
-    main .recent__ .always-rechable-card{
-        margin: 2rem  1rem ;
+
+    main .recent__ .always-rechable-card {
+        margin: 2rem 1rem;
         max-width: fit-content;
-        padding: 0.5rem ;
-       
-        
+        padding: 0.5rem;
+
+
     }
-    main .recent__ .always-rechable-card .reachable-left-txt > :first-child{
+
+    main .recent__ .always-rechable-card .reachable-left-txt> :first-child {
         font-size: 1.5rem;
         padding: 0.2rem;
         margin-bottom: 0;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt > :nth-child(2){
+
+    main .recent__ .always-rechable-card .reachable-left-txt> :nth-child(2) {
         font-size: 15px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username {
         font-size: 10px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p {
         font-size: 10px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail {
         padding-left: 2rem;
     }
+
     main .recent__ .always-rechable-card .reachable-left-txt .userdetails {
-        img{
+        img {
             max-width: 60px;
         }
     }
-    .reachable-right-img{
+
+    .reachable-right-img {
         text-align: center;
-        img{
+
+        img {
             max-width: 230px;
         }
     }
-    main footer .footer-right{
+
+    main footer .footer-right {
         text-align: center;
     }
-    main footer .footer-right span{
+
+    main footer .footer-right span {
         margin-right: 1rem;
         font-size: 12px;
     }
-    main footer .footer-left{
-        p{
+
+    main footer .footer-left {
+        p {
             font-size: 12px;
             text-align: center;
         }
     }
-    .cardleft_img{
+
+    .cardleft_img {
         text-align: center;
     }
+
+    main .all_portfolio .main_heading {
+        padding: 0.5rem 0;
+    }
+
+    main .all_portfolio .main_heading .dropdown {
+        padding-bottom: 1rem;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+        padding: 5px 0.8rem;
+        font-size: 11px;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.1rem;
+        font-size: 14px;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+        padding-bottom: 0;
+    }
+
+    main .community__ {
+        padding: 1rem 0.2rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt {
+        padding: 0.5rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt>p {
+        font-size: 10px;
+        margin-bottom: 1rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+        max-width: 50px;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+        text-align: center;
+
+        p {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+        padding-right: 0.5rem;
+
+        p {
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    main .community__ .community_main__ .community-main-card {
+        margin: 1rem 0;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt::after {
+        top: 30%;
+        font-size: 1.5rem;
+        right: -1rem;
+    }
+
+    //userdashboard responsive 
+    main .dashboard__ .userdashboard__main .userimage img {
+        max-width: 100px;
+    }
+
+    main .dashboard__ {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userimage {
+        left: -6%;
+        top: 10.9rem;
+
+    }
+
+    main .dashboard__ .userdashboard__main {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .edit-profile-btn {
+        display: none;
+    }
+
+    main .dashboard__ .userdashboard__main .username {
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+        padding: 0.5rem 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout>h4 {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__>h4 {
+        padding: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+        margin: 1rem 0.3rem;
+        padding: 0.5rem;
+
+        p {
+            font-size: 12px;
+            margin: 0.2rem;
+        }
+    }
+
+    .portfolio-card-2 {
+        display: none;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.2rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+        font-size: 10px;
+    }
 }
-@media only screen and (min-width:576px) and (max-width:768px){
-    main .header__ .nav__ .nav_middle{
+
+@media only screen and (min-width:576px) and (max-width:768px) {
+    main .header__ .nav__ .nav_middle {
         display: none;
     }
-    main .header__ .nav__ .nav_buttons{
+
+    main .header__ .nav__ .nav_buttons {
         display: none;
     }
-    .with-bg-img{
+
+    .with-bg-img {
         display: none;
     }
-    main .header__ .nav__{
+
+    main .header__ .nav__ {
         padding: 1.5rem;
     }
-    .nav_right_mobile{
-        i{
+
+    .nav_right_mobile {
+        i {
             font-size: 1.5rem;
         }
     }
-    main .welcome__ .welcome_headings > :first-child{
+
+    main .welcome__ .welcome_headings> :first-child {
         letter-spacing: 5px;
         font-size: 1.5rem;
     }
-    main .welcome__ .welcome_headings > :nth-child(2){
+
+    main .welcome__ .welcome_headings> :nth-child(2) {
         max-width: 100%;
         padding: 5px 15px;
         font-weight: bold;
         font-size: 32px;
     }
-    main .welcome__ .welcome_headings > :nth-child(4){
+
+    main .welcome__ .welcome_headings> :nth-child(4) {
         font-size: 17px;
     }
-    main .welcome__ .hero_sec_img{
+
+    main .welcome__ .hero_sec_img {
         right: 0;
         bottom: 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns{
+
+    main .welcome__ .welcome_headings .herosection_btns {
         padding-right: 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns button{
+
+    main .welcome__ .welcome_headings .herosection_btns button {
         width: 90%;
         margin: 1rem 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns{
-        >:first-child{
+
+    main .welcome__ .welcome_headings .herosection_btns {
+        >:first-child {
             box-shadow: 0 0 10px 0 #7744FF;
             border: 2px solid #7744FF;
         }
     }
-    main .profile-setup .setup_header > :first-child{
+
+    main .profile-setup .setup_header> :first-child {
         font-size: 1.6rem;
     }
-    main .profile-setup .setup_header > :last-child{
+
+    main .profile-setup .setup_header> :last-child {
         display: none;
     }
-    main .profile-setup .setup_header{
+
+    main .profile-setup .setup_header {
         margin: 0.5rem 0;
     }
-    main .profile-setup .profile-complet-card{
-        margin: 1rem 0.5rem ;
-        padding:  1rem;
+
+    main .profile-setup .profile-complet-card {
+        margin: 1rem 0.5rem;
+        padding: 1rem;
     }
-    main .profile-setup .profile-complet-card .cardright_txt{
+
+    main .profile-setup .profile-complet-card .cardright_txt {
         padding: 0.5rem 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :first-child {
+
+    main .profile-setup .profile-complet-card .cardright_txt> :first-child {
         padding: 0.5rem;
         font-size: 15px;
         letter-spacing: 4px;
         margin-bottom: 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(2){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(2) {
         font-size: 2rem;
         padding: 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(3){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(3) {
         font-size: 15px;
         line-height: normal;
         max-width: 100%;
     }
-    main .profile-setup .profile-complet-card .cardleft_img img{
+
+    main .profile-setup .profile-complet-card .cardleft_img img {
         max-width: 300px;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :last-child{
+
+    main .profile-setup .profile-complet-card .cardright_txt> :last-child {
         padding: 0.2rem 0;
         text-align: start;
     }
-    main .top-rated{
+
+    main .top-rated {
         padding: 0;
     }
-    main .top-rated .rated_header > h4{
+
+    main .top-rated .rated_header>h4 {
         font-size: 2.5rem;
         padding: 0.5rem;
     }
-    main .top-rated .rated_header{
+
+    main .top-rated .rated_header {
         padding: 0;
     }
-    main .top-rated .home-portfolio-card{
+
+    main .top-rated .home-portfolio-card {
         margin: 1rem 0.5rem;
         padding: 2rem;
         padding-top: 3rem;
         text-align: center;
     }
-    main .top-rated .home-portfolio-card > :nth-child(2){
+
+    main .top-rated .home-portfolio-card> :nth-child(2) {
         font-size: 1.5rem;
     }
-    main .top-rated .home-portfolio-card > :nth-child(3){
+
+    main .top-rated .home-portfolio-card> :nth-child(3) {
         font-size: 18px;
         max-width: 100%;
     }
-    main .recent__ .recent_users{
-        padding: 0.5rem         ;
-        gap: 1.5rem
-        ;
+
+    main .recent__ .recent_users {
+        padding: 0.5rem;
+        gap: 1.5rem;
         overflow: scroll;
         justify-content: start;
         border: none;
         scrollbar-width: none;
     }
-    main .recent__ .recent_users .recenet_user__ img{
+
+    main .recent__ .recent_users .recenet_user__ img {
         max-width: 80px;
     }
-    main .recent__ .recent_users .recenet_user__ P{
+
+    main .recent__ .recent_users .recenet_user__ P {
         font-size: 13px;
     }
-    main .recent__ .always-rechable-card{
-        margin: 2rem  1rem ;
+
+    main .recent__ .always-rechable-card {
+        margin: 2rem 1rem;
         max-width: fit-content;
-        padding: 2rem ;
-       
-        
+        padding: 2rem;
+
+
     }
-    main .recent__ .always-rechable-card .reachable-left-txt > :first-child{
+
+    main .recent__ .always-rechable-card .reachable-left-txt> :first-child {
         font-size: 2rem;
         padding: 0.2rem;
         margin-bottom: 0;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt > :nth-child(2){
+
+    main .recent__ .always-rechable-card .reachable-left-txt> :nth-child(2) {
         font-size: 18px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username {
         font-size: 10px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p {
         font-size: 10px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail {
         padding-left: 2rem;
     }
+
     main .recent__ .always-rechable-card .reachable-left-txt .userdetails {
-        img{
+        img {
             max-width: 60px;
         }
     }
-    .reachable-right-img{
+
+    .reachable-right-img {
         text-align: center;
-        img{
+
+        img {
             max-width: 230px;
         }
     }
-    main footer .footer-right{
+
+    main footer .footer-right {
         text-align: center;
     }
-    main footer .footer-right span{
+
+    main footer .footer-right span {
         margin-right: 1rem;
         font-size: 12px;
     }
-    main footer .footer-left{
-        p{
+
+    main footer .footer-left {
+        p {
             font-size: 12px;
             text-align: center;
         }
     }
-    .cardleft_img{
+
+    .cardleft_img {
         text-align: center;
     }
+
+    main .all_portfolio .main_heading {
+        padding: 0.5rem 0;
+    }
+
+    main .all_portfolio .main_heading .dropdown {
+        padding-bottom: 1rem;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+        padding: 5px 1rem;
+        font-size: 16px;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.5rem;
+        font-size: 16px;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+        padding-bottom: 0;
+    }
+
+    main .community__ {
+        padding: 1rem 0.2rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt {
+        padding: 1rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt>p {
+        font-size: 13px;
+        margin-bottom: 1rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+        max-width: 50px;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+        text-align: center;
+
+        p {
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+        padding-right: 0.5rem;
+
+        p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+    }
+
+    main .community__ .community_main__ .community-main-card {
+        margin: 1rem 0;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt::after {
+        top: 30%;
+        font-size: 2rem;
+        right: -1rem;
+    }
+
+    //userdashboard responsive 
+    main .dashboard__ .userdashboard__main .userimage img {
+        max-width: 100px;
+    }
+
+    main .dashboard__ {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userimage {
+        left: 4%;
+        top: 10.9rem;
+
+    }
+
+    main .dashboard__ .userdashboard__main {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .edit-profile-btn {
+        display: none;
+    }
+
+    main .dashboard__ .userdashboard__main .username {
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+        padding: 0.5rem 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout>h4 {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__>h4 {
+        padding: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+        margin: 1rem 0.3rem;
+        padding: 0.5rem;
+
+        p {
+            font-size: 12px;
+            margin: 0.2rem;
+        }
+    }
+
+    .portfolio-card-2 {
+        display: none;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.2rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+        font-size: 10px;
+    }
 }
-@media only screen and (min-width:768px) and (max-width:992px){
-    main .header__ .nav__ .nav_middle{
+
+@media only screen and (min-width:768px) and (max-width:992px) {
+    main .header__ .nav__ .nav_middle {
         display: none;
     }
-    main .header__ .nav__ .nav_buttons{
+
+    main .header__ .nav__ .nav_buttons {
         display: none;
     }
-    .with-bg-img{
+
+    .with-bg-img {
         display: none;
     }
-    main .header__ .nav__{
+
+    main .header__ .nav__ {
         padding: 1.5rem;
     }
-    .nav_right_mobile{
-        i{
+
+    .nav_right_mobile {
+        i {
             font-size: 1.5rem;
         }
     }
-    main .welcome__ .welcome_headings > :first-child{
+
+    main .welcome__ .welcome_headings> :first-child {
         letter-spacing: 5px;
         font-size: 1.5rem;
     }
-    main .welcome__ .welcome_headings > :nth-child(2){
+
+    main .welcome__ .welcome_headings> :nth-child(2) {
         max-width: 100%;
         padding: 5px 15px;
         font-weight: bold;
         font-size: 43px;
     }
-    main .welcome__ .welcome_headings > :nth-child(4){
+
+    main .welcome__ .welcome_headings> :nth-child(4) {
         font-size: 17px;
     }
-    main .welcome__ .hero_sec_img{
+
+    main .welcome__ .hero_sec_img {
         right: 0;
         bottom: 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns{
+
+    main .welcome__ .welcome_headings .herosection_btns {
         padding-right: 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns button{
+
+    main .welcome__ .welcome_headings .herosection_btns button {
         width: 90%;
         margin: 1rem 0;
     }
-    main .welcome__ .welcome_headings .herosection_btns{
-        >:first-child{
+
+    main .welcome__ .welcome_headings .herosection_btns {
+        >:first-child {
             box-shadow: 0 0 10px 0 #7744FF;
             border: 2px solid #7744FF;
         }
     }
-    main .profile-setup .setup_header > :first-child{
+
+    main .profile-setup .setup_header> :first-child {
         font-size: 3rem;
     }
-    main .profile-setup .setup_header > :last-child{
+
+    main .profile-setup .setup_header> :last-child {
         display: none;
     }
-    main .profile-setup .setup_header{
+
+    main .profile-setup .setup_header {
         margin: 0.5rem 0;
     }
-    main .profile-setup .profile-complet-card{
-        margin: 1rem 0.5rem ;
-        padding:  1rem;
+
+    main .profile-setup .profile-complet-card {
+        margin: 1rem 0.5rem;
+        padding: 1rem;
     }
-    main .profile-setup .profile-complet-card .cardright_txt{
+
+    main .profile-setup .profile-complet-card .cardright_txt {
         padding: 0.5rem 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :first-child {
+
+    main .profile-setup .profile-complet-card .cardright_txt> :first-child {
         padding: 0.5rem;
         font-size: 15px;
         letter-spacing: 4px;
         margin-bottom: 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(2){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(2) {
         font-size: 1.8rem;
         padding: 0;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(3){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(3) {
         font-size: 14px;
         line-height: normal;
         max-width: 100%;
     }
-    main .profile-setup .profile-complet-card .cardleft_img img{
+
+    main .profile-setup .profile-complet-card .cardleft_img img {
         max-width: 300px;
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :last-child{
+
+    main .profile-setup .profile-complet-card .cardright_txt> :last-child {
         padding: 0.2rem 0;
         text-align: start;
     }
-    main .top-rated{
+
+    main .top-rated {
         padding: 0;
     }
-    main .top-rated .rated_header > h4{
+
+    main .top-rated .rated_header>h4 {
         font-size: 2.5rem;
         padding: 0.5rem;
     }
-    main .top-rated .rated_header{
+
+    main .top-rated .rated_header {
         padding: 0;
     }
-    main .top-rated .home-portfolio-card{
+
+    main .top-rated .home-portfolio-card {
         margin: 1rem 0.5rem;
         padding: 2rem;
         padding-top: 3rem;
         text-align: center;
     }
-    main .top-rated .home-portfolio-card > :nth-child(2){
+
+    main .top-rated .home-portfolio-card> :nth-child(2) {
         font-size: 1.4rem;
     }
-    main .top-rated .home-portfolio-card > :nth-child(3){
+
+    main .top-rated .home-portfolio-card> :nth-child(3) {
         font-size: 16px;
         max-width: 100%;
     }
-    main .recent__ .recent_users{
-        padding: 0.5rem         ;
-        gap: 2.5rem
-        ;
+
+    main .recent__ .recent_users {
+        padding: 0.5rem;
+        gap: 2.5rem;
         overflow: scroll;
         justify-content: start;
         border: none;
         scrollbar-width: none;
     }
-    main .recent__ .recent_users .recenet_user__ img{
+
+    main .recent__ .recent_users .recenet_user__ img {
         max-width: 80px;
     }
-    main .recent__ .recent_users .recenet_user__ P{
+
+    main .recent__ .recent_users .recenet_user__ P {
         font-size: 13px;
     }
-    main .recent__ .always-rechable-card{
-        margin: 2rem  1rem ;
+
+    main .recent__ .always-rechable-card {
+        margin: 2rem 1rem;
         max-width: fit-content;
-        padding: 0.5rem ;
-       
-        
+        padding: 0.5rem;
+
+
     }
-    main .recent__ .always-rechable-card .reachable-left-txt > :first-child{
+
+    main .recent__ .always-rechable-card .reachable-left-txt> :first-child {
         font-size: 1.6rem;
         padding: 0.2rem;
         margin-bottom: 0;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt > :nth-child(2){
+
+    main .recent__ .always-rechable-card .reachable-left-txt> :nth-child(2) {
         font-size: 15px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail .username {
         font-size: 10px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail p {
         font-size: 10px;
     }
-    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail{
+
+    main .recent__ .always-rechable-card .reachable-left-txt .userdetails .user-detail {
         padding-left: 2rem;
     }
+
     main .recent__ .always-rechable-card .reachable-left-txt .userdetails {
-        img{
+        img {
             max-width: 60px;
         }
     }
-    .reachable-right-img{
+
+    .reachable-right-img {
         text-align: center;
-        img{
+
+        img {
             max-width: 230px;
         }
     }
-    main footer .footer-right{
+
+    main footer .footer-right {
         text-align: center;
     }
-    main footer .footer-right span{
+
+    main footer .footer-right span {
         margin-right: 1rem;
         font-size: 15px;
     }
-    main footer .footer-left{
-        p{
+
+    main footer .footer-left {
+        p {
             font-size: 15px;
             text-align: center;
         }
     }
-    .cardleft_img{
+
+    .cardleft_img {
         text-align: center;
     }
-}
-@media only screen and (min-width:992px) and (max-width:1200px){
-    main .recent__ .recent_users{
-        overflow: scroll;
+
+    main .all_portfolio .main_heading {
+        padding: 0.5rem 0;
     }
-    main .header__ .nav__ .nav_middle > ul{
-        padding: 0;
+
+    main .all_portfolio .main_heading .dropdown {
+        padding-bottom: 1rem;
     }
-    main .header__ .nav__ .nav_middle > ul li{
-        padding: 0.2rem 1rem;
-        font-size: 16px;
+
+    main .all_portfolio .main_cards_section .portfolio-cards {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+        text-align: center;
     }
-    main .header__ .nav__{
-        padding: 2rem 1rem;
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+        padding: 5px 1rem;
+        font-size: 13px;
     }
-    main .welcome__ .welcome_headings > :nth-child(2){
-        max-width: 89%;
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.5rem;
+        font-size: 14px;
     }
-    main .welcome__ .welcome_headings > :first-child{
-        font-size: 2rem;
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+        padding-bottom: 0;
     }
-    main .welcome__ .hero_sec_img{
-        right: 0;
-        bottom: 0;
+
+    main .community__ {
+        padding: 1rem 0.2rem;
     }
-    main .profile-setup .setup_header > :last-child {
-        max-width: 85%;
-        font-size: 25px;
+
+    main .community__ .community_main__ .community-main-card .community-card-txt {
+        padding: 1rem 0.5rem;
     }
-    main .profile-setup .profile-complet-card .cardleft_img img{
-        max-width: 420px;
+
+    main .community__ .community_main__ .community-main-card .community-card-txt>p {
+        font-size: 11px;
+        margin-bottom: 1rem;
     }
-    main .profile-setup .profile-complet-card{
-        padding: 0;
-        margin-top: 0;
-        .cardleft_img{
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+        max-width: 50px;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+        text-align: center;
+
+        p {
+            font-size: 12px;
             text-align: center;
         }
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(3){
-        max-width: 96%;
+
+    main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+        padding-right: 0.5rem;
+
+        p {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
     }
-    main .top-rated .home-portfolio-card{
-        margin: 2rem 0.5rem;
+
+    main .community__ .community_main__ .community-main-card {
+        margin: 1rem 0;
     }
-    main .top-rated .home-portfolio-card > :nth-child(2){
+
+    main .community__ .community_main__ .community-main-card .community-card-txt::after {
+        top: 30%;
+        font-size: 2rem;
+        right: -1rem;
+    }
+
+    //userdashboard responsive 
+    main .dashboard__ .userdashboard__main .userimage img {
+        max-width: 100px;
+    }
+
+    main .dashboard__ {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userimage {
+        left: 4%;
+        top: 10.9rem;
+
+    }
+
+    main .dashboard__ .userdashboard__main {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .edit-profile-btn {
+        display: none;
+    }
+
+    main .dashboard__ .userdashboard__main .username {
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+        padding: 0.5rem 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout>h4 {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__>h4 {
+        padding: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+        margin: 1rem 0.3rem;
+        padding: 0.5rem;
+
+        p {
+            font-size: 12px;
+            margin: 0.2rem;
+        }
+    }
+
+
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.2rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px) {
+    main .recent__ .recent_users {
+        overflow: scroll;
+    }
+
+    main .header__ .nav__ .nav_middle>ul {
+        padding: 0;
+    }
+
+    main .header__ .nav__ .nav_middle>ul li {
+        padding: 0.2rem 1rem;
+        font-size: 16px;
+    }
+
+    main .header__ .nav__ {
+        padding: 2rem 1rem;
+    }
+
+    main .welcome__ .welcome_headings> :nth-child(2) {
+        max-width: 89%;
+    }
+
+    main .welcome__ .welcome_headings> :first-child {
         font-size: 2rem;
     }
-    main .top-rated .home-portfolio-card > :nth-child(3){
+
+    main .welcome__ .hero_sec_img {
+        right: 0;
+        bottom: 0;
+    }
+
+    main .profile-setup .setup_header> :last-child {
+        max-width: 85%;
+        font-size: 25px;
+    }
+
+    main .profile-setup .profile-complet-card .cardleft_img img {
+        max-width: 420px;
+    }
+
+    main .profile-setup .profile-complet-card {
+        padding: 0;
+        margin-top: 0;
+
+        .cardleft_img {
+            text-align: center;
+        }
+    }
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(3) {
+        max-width: 96%;
+    }
+
+    main .top-rated .home-portfolio-card {
+        margin: 2rem 0.5rem;
+    }
+
+    main .top-rated .home-portfolio-card> :nth-child(2) {
+        font-size: 2rem;
+    }
+
+    main .top-rated .home-portfolio-card> :nth-child(3) {
         font-size: 22px;
         max-width: 100%;
     }
+
+    main .all_portfolio .main_heading {
+        padding: 0.5rem 0;
+    }
+
+    main .all_portfolio .main_heading .dropdown {
+        padding-bottom: 1rem;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+        padding: 5px 0.4rem;
+        font-size: 12px;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.3rem;
+        font-size: 12px;
+    }
+
+    main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+        padding-bottom: 0;
+    }
+
+    main .community__ {
+        padding: 1rem 0.2rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt {
+        padding: 1rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt>p {
+        font-size: 12px;
+        margin-bottom: 1rem;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+        max-width: 50px;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+        text-align: center;
+
+        p {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+        padding-right: 0.5rem;
+
+        p {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+
+    main .community__ .community_main__ .community-main-card {
+        margin: 1rem 0;
+    }
+
+    main .community__ .community_main__ .community-main-card .community-card-txt::after {
+        top: 30%;
+        font-size: 2rem;
+        right: -1rem;
+    }
+
+    //userdashboard responsive 
+    main .dashboard__ .userdashboard__main .userimage img {
+        max-width: 120px;
+    }
+
+    main .dashboard__ {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userimage {
+        left: 6%;
+        top: 10rem;
+
+    }
+
+    main .dashboard__ .userdashboard__main {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .edit-profile-btn {
+        display: none;
+    }
+
+    main .dashboard__ .userdashboard__main .username {
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+        padding: 0.5rem 1.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout>h4 {
+        padding: 0.5rem;
+    }
+
+    main .dashboard__ .userdashboard__main .userabout p {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__>h4 {
+        padding: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+        margin: 1rem 0.3rem;
+        padding: 0.5rem;
+
+        p {
+            font-size: 12px;
+            margin: 0.2rem;
+        }
+    }
+
+
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+        margin: 0 0.2rem;
+    }
+
+    main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+        font-size: 10px;
+    }
 }
-@media only screen and (min-width:1200px) and (max-width:1400px){
-    main .recent__ .recent_users{
+
+@media only screen and (min-width:1200px) and (max-width:1400px) {
+    main .recent__ .recent_users {
         overflow: scroll;
         gap: 2.5rem;
         scrollbar-width: none;
     }
-    main .header__ .nav__ .nav_middle > ul{
+
+    main .header__ .nav__ .nav_middle>ul {
         padding: 0;
     }
-    main .header__ .nav__ .nav_middle > ul li{
+
+    main .header__ .nav__ .nav_middle>ul li {
         padding: 0.2rem 1rem;
         font-size: 16px;
     }
-    main .header__ .nav__{
+
+    main .header__ .nav__ {
         padding: 2rem 1rem;
     }
-    main .welcome__ .welcome_headings > :nth-child(2){
+
+    main .welcome__ .welcome_headings> :nth-child(2) {
         max-width: 89%;
     }
-    main .welcome__ .welcome_headings > :first-child{
+
+    main .welcome__ .welcome_headings> :first-child {
         font-size: 2rem;
     }
-    main .welcome__ .hero_sec_img{
+
+    main .welcome__ .hero_sec_img {
         right: 0;
         bottom: 0;
     }
-    main .profile-setup .setup_header > :last-child {
+
+    main .profile-setup .setup_header> :last-child {
         max-width: 85%;
         font-size: 25px;
     }
-    main .profile-setup .profile-complet-card .cardleft_img img{
+
+    main .profile-setup .profile-complet-card .cardleft_img img {
         max-width: 420px;
     }
-    main .profile-setup .profile-complet-card{
+
+    main .profile-setup .profile-complet-card {
         padding: 0;
         margin-top: 0;
-        .cardleft_img{
+
+        .cardleft_img {
             text-align: center;
         }
     }
-    main .profile-setup .profile-complet-card .cardright_txt > :nth-child(3){
+
+    main .profile-setup .profile-complet-card .cardright_txt> :nth-child(3) {
         max-width: 96%;
     }
-    main .top-rated .home-portfolio-card{
+
+    main .top-rated .home-portfolio-card {
         margin: 2rem 0.5rem;
     }
-    main .top-rated .home-portfolio-card > :nth-child(2){
+
+    main .top-rated .home-portfolio-card> :nth-child(2) {
         font-size: 2rem;
     }
-    main .top-rated .home-portfolio-card > :nth-child(3){
+
+    main .top-rated .home-portfolio-card> :nth-child(3) {
         font-size: 22px;
         max-width: 100%;
     }
 }
-
-
-

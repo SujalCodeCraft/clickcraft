@@ -19,29 +19,61 @@
             <header class="header__">
                 <nav class="nav__">
                     <div class="nav_logo">
+                          <a href="index.html">
                         <img src="assets/img/Logo.png" class="img-fluid"
-                            alt="Nav-logo">
+                        alt="Nav-logo">
+                       </a>
                     </div>
                     <div class="nav_middle">
                         <ul>
-                            <li><a href="#">Home </a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Community </a></li>
+                            <li><a href="index.html" class="active ">Home </a></li>
+                            <li><a href="all-protfolio.html">Portfolio</a></li>
+                            <li><a href="community.html">Community </a></li>
                             <li><a href="#">About us </a></li>
                         </ul>
                     </div>
                     <div class="nav_buttons">
                         <div class="signin_btn">
-                            <a href="#"><button>Sign In</button></a>
+                            <button id="sign-in-btn">Sign In</button>
                         </div>
                         <div class="signup_btn">
-                            <a href="#"><button>Sign Up</button></a>
+                            <button id="sign-up-btn">Sign Up</button>
                         </div>
                     </div>
                     <div class="nav_right_mobile">
-                        <span><i class="bi bi-list"></i></span>
+                        <span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="bi bi-list"></i></span>
                     </div>
                 </nav>
+                <!-- offcanvas for mobile view  -->
+                
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasTopLabel">
+                        <img src="assets/img/Logo.png" class="img-fluid" alt="">
+                      </h5>
+                      <button type="button" class="btn-close closing-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- <h4>Welcome To Clickcraft </h4> -->
+                        <div class="nav-list">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="community.html">Community </a></li>
+                                <li><a href="all-protfolio.html">Portfolios</a></li>
+                                <li><a href="#"></a>About us</li>
+                            </ul>
+                        </div>
+                        <div class="nav-btns">
+                            <a href="#">
+                                <button>Sign Up </button>
+                            </a><a href="#">
+                               <button> Sign In </button>
+                            </a>
+                        </div>
+                    </div>
+                  </div>
+                  
             </header>
             <!-- hero section / Welcome section -->
             <section class="welcome__">

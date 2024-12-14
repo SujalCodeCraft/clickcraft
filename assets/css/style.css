@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Add this if you are using Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+.element::after {
+  content: "\f0da";
+  /* Unicode for Font Awesome right caret */
+  font-family: "Font Awesome 5 Free";
+  /* Specify Font Awesome family */
+  font-weight: 900;
+  /* Set appropriate weight for Font Awesome solid icons */
+  padding-left: 10px;
+  /* Space before the arrow */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +19,69 @@
   font-family: "Roboto" sans-serif;
 }
 
+.signupin___ {
+  background-color: #010314;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signupin___ .singupin__form {
+  border: 1px solid #fff;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  min-width: 400px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: 2px solid #664DFF;
+  box-shadow: #7241FF 0px 7px 70px -20px;
+  background-color: rgba(1, 3, 20, 0.1450980392);
+}
+.signupin___ .singupin__form .form-header > h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.signupin___ .singupin__form .form-body .form-input__ {
+  padding: 0.5rem;
+}
+.signupin___ .singupin__form .form-body .form-input__ > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 17px;
+}
+.signupin___ .singupin__form .form-body .form-input__ input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #2a2b3a;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.signupin___ .singupin__form .form-body .form-input__ input:focus {
+  outline: 2px solid #664DFF;
+}
+.signupin___ .singupin__form .form-body .form-input__ button {
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #664DFF;
+  color: #fff;
+  border: none;
+}
+.signupin___ .singupin__form .form-body .signin-line {
+  padding: 0.5rem;
+}
+.signupin___ .singupin__form .form-body .signin-line a {
+  color: #fff !important;
+}
+
 main {
   background-color: #010314;
   color: #ffffff;
   font-size: 16px;
+  /* Target the custom close button */
+  /* For better compatibility with Bootstrap, target the btn-close specifically */
 }
 main a {
   color: #fff;
@@ -17,6 +89,57 @@ main a {
 }
 main ul {
   margin-bottom: 0;
+}
+main .offcanvas {
+  background-color: #010314;
+  color: #fff;
+  height: 100vh !important;
+}
+main .offcanvas .offcanvas-body > h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+main .offcanvas .offcanvas-body .nav-list {
+  padding: 1rem;
+}
+main .offcanvas .offcanvas-body .nav-list > ul {
+  padding-left: 0;
+}
+main .offcanvas .offcanvas-body .nav-list > ul li {
+  list-style-type: none;
+  border-bottom: 1px solid #2A2B3A;
+  padding: 0.8rem;
+  padding-left: 0;
+}
+main .offcanvas .offcanvas-body .nav-btns {
+  padding: 1rem;
+}
+main .offcanvas .offcanvas-body .nav-btns button {
+  background-color: transparent;
+  border: 2px solid #2A2B3A;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+main .closing-btn {
+  background-color: transparent;
+  /* Keep the background transparent */
+  border: none;
+  /* Remove any border */
+  /* Override the color of the close (X) icon */
+}
+main .closing-btn::before {
+  color: #fff;
+  /* Change the cross (X) color to white */
+}
+main .btn-close {
+  filter: brightness(0) invert(1);
+  /* This makes the icon white */
+}
+main .btn-close:hover {
+  filter: brightness(0) invert(0.7);
+  /* Slightly dim the icon on hover */
 }
 main .header__ .nav__ {
   display: flex;
@@ -31,6 +154,10 @@ main .header__ .nav__ .nav_logo img {
 }
 main .header__ .nav__ .nav_middle {
   padding-left: 2.5rem;
+}
+main .header__ .nav__ .nav_middle .active {
+  color: #865BFF;
+  font-weight: 500;
 }
 main .header__ .nav__ .nav_middle > ul {
   display: flex;
@@ -307,6 +434,242 @@ main footer .footer-right {
 main footer .footer-right span {
   margin-right: 1.5rem;
 }
+main .all_portfolio .main_heading {
+  padding: 2rem 0;
+}
+main .all_portfolio .main_heading .dropdown {
+  padding-right: 2rem;
+}
+main .all_portfolio .main_heading .dropdown .dropdown_main {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: 2px solid #2A2B3A;
+  background-color: transparent;
+  padding: 0.2rem 1rem;
+  justify-self: end;
+  border-radius: 0.5rem;
+}
+main .all_portfolio .main_heading .dropdown .dropdown_main select {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+}
+main .all_portfolio .main_heading .dropdown .dropdown_main select:focus {
+  border: none;
+  outline: none;
+}
+main .all_portfolio .main_heading .heading_main {
+  text-align: center;
+}
+main .all_portfolio .main_heading .heading_main h3 {
+  font-size: 2.5rem;
+}
+main .all_portfolio .main_cards_section .portfolio-cards {
+  border: 1px solid #fff;
+  padding: 1.5rem;
+  margin: 2rem 0.5rem;
+  border-top: 4px solid #664DFF;
+  border-bottom: 4px solid #664DFF;
+  border-radius: 1rem;
+  border-right: 1px solid #664DFF;
+  border-left: 1px solid #664dff;
+  background-color: #010314;
+}
+main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+  padding: 1rem 0.5rem;
+}
+main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main {
+  text-align: center;
+}
+main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+  padding: 5px 1.2rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #7241FF;
+  border-radius: 0.5rem;
+}
+main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ {
+  display: flex;
+}
+main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+  margin-bottom: 0;
+  margin: 0 0.5rem;
+}
+main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p span {
+  margin-right: 0.5rem;
+}
+main .community__ {
+  padding: 3rem 0.5rem;
+}
+main .community__ .community_main_heading h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+main .community__ .community_main__ .community-main-card {
+  padding: 0.5rem;
+  margin: 2rem 0;
+}
+main .community__ .community_main__ .community-main-card .community-card-txt {
+  position: relative;
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-width: 4px 1px;
+  border-style: solid;
+  border-color: #7744FF;
+  border-radius: 0.5rem;
+}
+main .community__ .community_main__ .community-main-card .community-card-txt > p {
+  color: #77798F;
+  margin-bottom: 3rem;
+}
+main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom > :last-child span {
+  margin: 0 0.5rem;
+  margin-right: 0.3rem;
+}
+main .community__ .community_main__ .community-main-card .community-card-txt::after {
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -1.5rem;
+  font-size: 2.5rem;
+  top: 35%;
+}
+main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-align: center;
+  padding-inline: 1rem;
+}
+main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+  max-width: 100px;
+}
+main .dashboard__ {
+  padding: 1rem;
+}
+main .dashboard__ .userdashboard__main {
+  border-width: 5px 2px;
+  border-color: #664DFF;
+  border-style: solid;
+  border-radius: 1rem;
+  box-shadow: #7241FF 0px 7px 70px -20px;
+  position: relative;
+  margin-top: 8rem;
+  padding: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+}
+main .dashboard__ .userdashboard__main .userimage {
+  text-align: center;
+  position: relative;
+}
+main .dashboard__ .userdashboard__main .userimage img {
+  max-width: 250px;
+  position: absolute;
+  left: 36%;
+  top: -16rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+main .dashboard__ .userdashboard__main .edit-profile-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+main .dashboard__ .userdashboard__main .edit-profile-btn button {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #7744FF;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: #7241FF 0px 7px 70px -20px;
+  border-radius: 0.5rem;
+}
+main .dashboard__ .userdashboard__main .username {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+main .dashboard__ .userdashboard__main .userdetails-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+  border-right: 2px solid #fff;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+main .dashboard__ .userdashboard__main .userdetails-count .count__ > :first-child {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main .dashboard__ .userdashboard__main .userdetails-count .count__ p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+main .dashboard__ .userdashboard__main .userdetails-count > :last-child {
+  border: none;
+}
+main .dashboard__ .userdashboard__main .userabout {
+  padding: 1rem 0.2rem;
+}
+main .dashboard__ .userdashboard__main .userabout > h4 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+main .dashboard__ .userdashboard__main .userabout p {
+  font-size: 17px;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ {
+  padding: 1rem 0.2rem;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ > h4 {
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+  border: 1px solid #fff;
+  padding: 1.5rem;
+  margin: 2rem 0.5rem;
+  border-top: 4px solid #664DFF;
+  border-bottom: 4px solid #664DFF;
+  border-radius: 1rem;
+  border-right: 1px solid #664DFF;
+  border-left: 1px solid #664dff;
+  background-color: #010314;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details {
+  padding: 1rem 0.5rem;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main {
+  text-align: center;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+  padding: 5px 1.2rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #7241FF;
+  border-radius: 0.5rem;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ {
+  display: flex;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+  margin-bottom: 0;
+  margin: 0 0.5rem;
+}
+main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p span {
+  margin-right: 0.5rem;
+}
 
 @media only screen and (min-width: 992px) {
   .nav_right_mobile {
@@ -480,6 +843,122 @@ main footer .footer-right span {
   .cardleft_img {
     text-align: center;
   }
+  main .all_portfolio .main_heading {
+    padding: 0.5rem 0;
+  }
+  main .all_portfolio .main_heading .dropdown {
+    padding-bottom: 1rem;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+    padding: 5px 0.8rem;
+    font-size: 11px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.1rem;
+    font-size: 14px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+    padding-bottom: 0;
+  }
+  main .community__ {
+    padding: 1rem 0.2rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt {
+    padding: 0.5rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt > p {
+    font-size: 10px;
+    margin-bottom: 1rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+    max-width: 50px;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box p {
+    font-size: 12px;
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+    padding-right: 0.5rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom p {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  main .community__ .community_main__ .community-main-card {
+    margin: 1rem 0;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt::after {
+    top: 30%;
+    font-size: 1.5rem;
+    right: -1rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage img {
+    max-width: 100px;
+  }
+  main .dashboard__ {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage {
+    left: -6%;
+    top: 10.9rem;
+  }
+  main .dashboard__ .userdashboard__main {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .edit-profile-btn {
+    display: none;
+  }
+  main .dashboard__ .userdashboard__main .username {
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+    padding: 0.5rem 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout > h4 {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ > h4 {
+    padding: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+    margin: 1rem 0.3rem;
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 12px;
+    margin: 0.2rem;
+  }
+  .portfolio-card-2 {
+    display: none;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.2rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 10px;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   main .header__ .nav__ .nav_middle {
@@ -645,6 +1124,122 @@ main footer .footer-right span {
   }
   .cardleft_img {
     text-align: center;
+  }
+  main .all_portfolio .main_heading {
+    padding: 0.5rem 0;
+  }
+  main .all_portfolio .main_heading .dropdown {
+    padding-bottom: 1rem;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+    padding: 5px 1rem;
+    font-size: 16px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.5rem;
+    font-size: 16px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+    padding-bottom: 0;
+  }
+  main .community__ {
+    padding: 1rem 0.2rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt {
+    padding: 1rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt > p {
+    font-size: 13px;
+    margin-bottom: 1rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+    max-width: 50px;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box p {
+    font-size: 13px;
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+    padding-right: 0.5rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  main .community__ .community_main__ .community-main-card {
+    margin: 1rem 0;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt::after {
+    top: 30%;
+    font-size: 2rem;
+    right: -1rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage img {
+    max-width: 100px;
+  }
+  main .dashboard__ {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage {
+    left: 4%;
+    top: 10.9rem;
+  }
+  main .dashboard__ .userdashboard__main {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .edit-profile-btn {
+    display: none;
+  }
+  main .dashboard__ .userdashboard__main .username {
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+    padding: 0.5rem 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout > h4 {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ > h4 {
+    padding: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+    margin: 1rem 0.3rem;
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 12px;
+    margin: 0.2rem;
+  }
+  .portfolio-card-2 {
+    display: none;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.2rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 10px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -812,6 +1407,119 @@ main footer .footer-right span {
   .cardleft_img {
     text-align: center;
   }
+  main .all_portfolio .main_heading {
+    padding: 0.5rem 0;
+  }
+  main .all_portfolio .main_heading .dropdown {
+    padding-bottom: 1rem;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+    padding: 5px 1rem;
+    font-size: 13px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.5rem;
+    font-size: 14px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+    padding-bottom: 0;
+  }
+  main .community__ {
+    padding: 1rem 0.2rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt {
+    padding: 1rem 0.5rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt > p {
+    font-size: 11px;
+    margin-bottom: 1rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+    max-width: 50px;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box p {
+    font-size: 12px;
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+    padding-right: 0.5rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  main .community__ .community_main__ .community-main-card {
+    margin: 1rem 0;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt::after {
+    top: 30%;
+    font-size: 2rem;
+    right: -1rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage img {
+    max-width: 100px;
+  }
+  main .dashboard__ {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage {
+    left: 4%;
+    top: 10.9rem;
+  }
+  main .dashboard__ .userdashboard__main {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .edit-profile-btn {
+    display: none;
+  }
+  main .dashboard__ .userdashboard__main .username {
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+    padding: 0.5rem 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout > h4 {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ > h4 {
+    padding: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+    margin: 1rem 0.3rem;
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 12px;
+    margin: 0.2rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.2rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 10px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   main .recent__ .recent_users {
@@ -863,6 +1571,119 @@ main footer .footer-right span {
   main .top-rated .home-portfolio-card > :nth-child(3) {
     font-size: 22px;
     max-width: 100%;
+  }
+  main .all_portfolio .main_heading {
+    padding: 0.5rem 0;
+  }
+  main .all_portfolio .main_heading .dropdown {
+    padding-bottom: 1rem;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .btns-main button {
+    padding: 5px 0.4rem;
+    font-size: 12px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.3rem;
+    font-size: 12px;
+  }
+  main .all_portfolio .main_cards_section .portfolio-cards .portfolio-card-details {
+    padding-bottom: 0;
+  }
+  main .community__ {
+    padding: 1rem 0.2rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt {
+    padding: 1rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt > p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box img {
+    max-width: 50px;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box {
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-img .img-box p {
+    font-size: 12px;
+    text-align: center;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom {
+    padding-right: 0.5rem;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt .card-txt-bottom p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  main .community__ .community_main__ .community-main-card {
+    margin: 1rem 0;
+  }
+  main .community__ .community_main__ .community-main-card .community-card-txt::after {
+    top: 30%;
+    font-size: 2rem;
+    right: -1rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage img {
+    max-width: 120px;
+  }
+  main .dashboard__ {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userimage {
+    left: 6%;
+    top: 10rem;
+  }
+  main .dashboard__ .userdashboard__main {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .edit-profile-btn {
+    display: none;
+  }
+  main .dashboard__ .userdashboard__main .username {
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .userdetails-count .count__ {
+    padding: 0.5rem 1.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout > h4 {
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .userabout p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ > h4 {
+    padding: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards {
+    margin: 1rem 0.3rem;
+    padding: 0.5rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 12px;
+    margin: 0.2rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .btns-main button {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards .portfolio-card-details .views__ p {
+    margin: 0 0.2rem;
+  }
+  main .dashboard__ .userdashboard__main .myportfolio__ .portfolio-cards p {
+    font-size: 10px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
